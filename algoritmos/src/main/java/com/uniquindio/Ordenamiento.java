@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Ordenamiento {
     // Método Burbuja
     public static void burbuja(int[] arr) {
-        System.out.println("Ejecucion metodo Burbuja");
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -20,7 +19,7 @@ public class Ordenamiento {
 
     // Método Quicksort
     public static void quicksort(int[] arr, int low, int high) {
-        System.out.println("Ejecucion metodo Quicksort");
+
         if (low < high) {
             int pi = partition(arr, low, high);
             quicksort(arr, low, pi - 1);
@@ -45,13 +44,10 @@ public class Ordenamiento {
         return i + 1;
     }
 
-    // Otros algoritmos de ordenamiento (Stooge Sort, Pigeonhole Sort, Merge Sort, Bitonic Sort)
-    // Los puedes implementar siguiendo un patrón similar
-
 
     // Método para Stooge Sort
     public static void stoogeSort(int[] arr, int l, int h) {
-        System.out.println("Ejecucion metodo Stooge Sort");
+        
         if (l >= h) {
             return;
         }
@@ -72,7 +68,7 @@ public class Ordenamiento {
 
     // Método para Pigeonhole Sort
     public static void pigeonholeSort(int[] arr) {
-        System.out.println("Ejecucion metodo Pigeonhole Sort");
+        
         int min = arr[0], max = arr[0], range, i, j, index;
 
         for (int a : arr) {
@@ -99,7 +95,7 @@ public class Ordenamiento {
 
     // Método para Merge Sort
     public static void mergeSort(int[] arr, int left, int right) {
-        System.out.println("Ejecucion metodo Merge Sort");
+        
         if (left < right) {
             int mid = (left + right) / 2;
             mergeSort(arr, left, mid);
@@ -149,7 +145,7 @@ public class Ordenamiento {
 
     // Método para Bitonic Sort
     public static void bitonicSort(int[] arr, int low, int cnt, boolean dir) {
-        System.out.println("Ejecucion metodo Bitonic Sort");
+        
         if (cnt > 1) {
             int k = cnt / 2;
             bitonicSort(arr, low, k, true);
